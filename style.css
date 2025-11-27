@@ -717,7 +717,7 @@ article h3 {
         position: absolute;
         animation: puzir2 7s infinite linear;
         width: 70px;
-        left: +340px;
+        left: +300px;
         top: 105px;
         opacity: 0.4;
         background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
@@ -849,7 +849,8 @@ article h3 {
     }
 
     .third div {
-        width: 330px;
+        width: 315px;
+        height: 165px;
 
 
     }
