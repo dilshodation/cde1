@@ -1,22 +1,23 @@
-
-
 body {
     margin: 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body p{
+
+body p {
     font-size: 17px;
 }
 
 header {
     display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
     justify-content: space-around;
     align-items: center;
     padding: 10px;
     margin: auto;
     height: 70px;
     word-spacing: 20px;
-
     background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
 }
 
@@ -24,25 +25,28 @@ header h2 {
     font-size: 30px;
     margin-left: -150px;
     color: azure;
-    
+
 }
-header a{
-    color:azure;
+
+header a {
+    color: azure;
     text-decoration: none;
     margin: auto;
     position: relative;
     padding: 1px;
 }
-header a::before{
+
+header a::before {
     content: "";
-position: absolute;
-background-color: azure;
-height: 1.5px;
-top: 25px;
-width: 0%;
-transition: 00.3s;
+    position: absolute;
+    background-color: azure;
+    height: 1.5px;
+    top: 25px;
+    width: 0%;
+    transition: 00.3s;
 }
-header a:hover::before{
+
+header a:hover::before {
     width: 100%;
 }
 
@@ -58,107 +62,136 @@ header nav {
     align-items: center;
     padding: 0px 40px;
     flex-direction: column;
+    position: relative;
     margin: auto;
-    height: 550px;
+    height: 650px;
     background-image: linear-gradient(to right, rgb(192, 248, 192), rgb(255, 187, 255));
 
 
 }
-.puzir{
-    height: 200px;
-    margin-right: -1000px;
-    width: 200px;
+
+.puzir {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 100px;
+    right: 150px;
     animation: puzir 5s infinite linear;
     background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
-opacity: 0.3;
+    border-radius: 140px 140px 150px 160px;
+    opacity: 0.4;
 }
+
 @keyframes puzir {
-    0%{
-        border-radius: 140px  140px 150px 160px;
-        transform:translateY(0px);
-        opacity: 0.4;
-    }
-    50%{
-        border-radius:140px  140px 150px 160px ;
-        transform: translateY(+12px);
-        opacity: 0.4;
+    0% {
+        transform: translateY(0px);
     }
 
-    100%{
-        border-radius: 140px  140px 150px 160px;
-        transform: translateY(0px);
-        opacity: 0.4;
-        
+    50% {
+        transform: translateY(+10px);
     }
-    
+
+    100% {
+        transform: translateY(0px);
+
+
+    }
+
 }
-/* .puzir2{ */
-    height: 320px;
-    width: 310px;
+
+.puzir2 {
+    height: 180px;
+    position: absolute;
+    animation: puzir2 7s infinite linear;
+    width: 180px;
+    left: 990px;
+    opacity: 0.4;
     background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
-opacity: 0.5;
-animation: puzir2 infinite linear 5s;
-margin-right00px;
+    border-radius: 150px 150px 140px 170px;
 }
-/* @keyframes puzir2 { */
+
+@keyframes puzir2 {
     0%{
-        opacity: 0.5;
-        border-radius: 150px 130px 140px 150px;
         transform: translateY(0px);
     }
     50%{
-        opacity: 0.5;
-        border-radius: 150px 130px 140px 150px;
         transform: translateY(+13px);
     }
     100%{
-        opacity: 0.5;
-        border-radius: 150px 130px 140px 150px;
         transform: translateY(0px);
     }
-    
 }
-
-
-.first h1 {
-    font-size: 50px;
-    letter-spacing: 1px;
-color:transparent;   
-padding: 10px;
-margin:10px 200px;
-background-clip: text;
+.puzir3{
+    height: 310px;
+    width: 310px;
     background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
-animation: h1 1.2s forwards linear;
-opacity: 0;
+    opacity: 0.4;
+    border-radius: 150px 190px 90px 190px;
+    position: absolute;
+    animation: puzir3 8s infinite linear;
+    left: 125px;
+    top: 60px;
 }
-@keyframes h1 {
+@keyframes puzir3 {
     0%{
-        opacity: 0;
-        
+        transform: translateY(0px);
+
+    }
+    50%{
+        transform: translateY(+16px);
     }
     100%{
+        transform: translateY(0px);
+    }
+}
+
+.first h1 {
+    font-size: 60px;
+    letter-spacing: 1px;
+    color: transparent;
+    padding: 20px;
+    width: 100%;
+    margin: 10px;
+    width: 600px;
+    background-clip: text;
+    background-image: linear-gradient(to right, rgb(1, 53, 1), rgb(95, 2, 95));
+    animation: h1 1.2s forwards linear;
+    opacity: 0;
+}
+
+@keyframes h1 {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
         opacity: 1;
-        
+
     }
 }
 
 .first p {
     font-size: 20px;
-    padding: 10px;
-    margin: 10px 200px;
+    padding: 20px;
+    margin: 10px;
     opacity: 0;
+    width: 100%;
+    width: 600px;
     animation: p 1.6s forwards linear;
 }
-@keyframes p  {
-    0%{
+
+@keyframes p {
+    0% {
         opacity: 0;
         transform: translateY(+15);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(-15px);
     }
-    
+
 }
 
 .first button {
@@ -168,27 +201,25 @@ opacity: 0;
     border: none;
     outline: none;
     width: 180px;
-    margin: 15px 0px;
+    margin: 0 2px;
+    transform: translateX(-20px);
     background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
     color: azure;
     font-size: 15px;
     animation: forwards linear 1.7s button;
     opacity: 0;
 }
+
 @keyframes button {
-    0%{
+    0% {
         opacity: 0;
-        
+
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
-    
-}
 
-.first div {
-    position: relative;
-    left: -100px;
 }
 
 .first button:hover {
@@ -196,10 +227,7 @@ opacity: 0;
     background-image: linear-gradient(to right, rgb(2, 128, 2), rgb(132, 3, 132));
 }
 
-.second h2 {
-    width: 100%;
-    text-align: center;
-}
+
 
 .second {
     display: flex;
@@ -214,11 +242,18 @@ opacity: 0;
 
 .second h2 {
     font-size: 40px;
-
+    color: transparent;
+    background-clip: text;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to right, purple, darkgreen);
 }
 
 .second div h3 {
     font-size: 25px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, darkgreen, purple);
 }
 
 .second div p {
@@ -228,10 +263,10 @@ opacity: 0;
 .second div {
     width: 300px;
     border-radius: 20px;
-    border:transparent 5px solid;
+    border: transparent 5px solid;
     background-image: linear-gradient(white, white), linear-gradient(darkgreen, purple);
-    background-clip:  padding-box, border-box;
-    background-origin:border-box;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
     margin: 20px;
     padding: 20px;
     height: 265px;
@@ -271,6 +306,9 @@ opacity: 0;
     width: 100%;
     text-align: center;
     font-size: 40px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right, darkgreen, purple);
 }
 
 .third div {
@@ -308,6 +346,9 @@ h4 {
 
 .fourth h2 {
     font-size: 40px;
+    color: transparent;
+    background-image: linear-gradient(to right, darkgreen, purple);
+    background-clip: text;
 }
 
 .fourth p {
@@ -328,15 +369,17 @@ h4 {
     animation: forwards linear 1.7s button;
     opacity: 0;
 }
+
 @keyframes button {
-    0%{
+    0% {
         opacity: 0;
-        
+
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
-    
+
 }
 
 
@@ -391,169 +434,286 @@ footer h3 {
     color: azure;
 
 }
-article{
+
+article {
     display: flex;
     justify-content: center;
     align-items: center;
     color: azure;
     background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
-height: 80px;
-border-top: solid azure 0.5px;
+    height: 80px;
+    border-top: solid azure 0.5px;
 }
-article h3{
+
+article h3 {
     font-size: 13px;
 }
 
 @media screen and (max-width: 1024px) {
-    .second div{
+    .second div {
         margin: 5px;
         height: 290px;
         width: 240px;
-        
+
     }
-    .second div p{
+
+    .second div p {
         font-size: 17px;
     }
-    
+
 }
 
 @media screen and (max-width: 768px) {
-    .second div{
+    .second div {
         height: 270px;
         width: 250px;
     }
-    .first p{
-        font-size: 17px;
-        width: 65%;
+
+    .first p {
+        font-size: 18px;
+        width: 85%;
     }
-    .first h1{
-        width: 65%;
+
+    .first h1 {
+        width: 85%;
     }
-    .fourth p{
+
+    .fourth p {
         font-size: 17px;
     }
 
-    .second div p{
+    .second div p {
         font-size: 16px;
 
     }
-    .third div i{
+
+    .third div i {
         font-size: 15px;
     }
-    .third div{
+
+    .third div {
         height: 130px;
         width: 600px;
         padding: 5px;
         position: relative;
         bottom: -70px;
     }
-    .third h2{
+
+    .third h2 {
         position: relative;
         bottom: -100px;
     }
 }
+
 @media screen and (max-width: 426px) {
-    .first p{
-font-size: 14px;
-width: 100%;
-padding: 0px 40px;
+    .first p {
+        font-size: 14px;
+        width: 100%;
+        padding: 0px 40px;
 
     }
-    .first h1{
-        font-size: 25px;
+    .puzir {
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        animation: puzir 5s infinite linear;
+        background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+        border-radius: 140px 140px 150px 160px;
+        opacity: 0.4;
+    }
+    
+    @keyframes puzir {
+        0% {
+            transform: translateY(0px);
+        }
+    
+        50% {
+            transform: translateY(+10px);
+        }
+    
+        100% {
+            transform: translateY(0px);
+    
+    
+        }
+    
+    }
+    
+    .puzir2 {
+        height: 70px;
+        position: absolute;
+        animation: puzir2 7s infinite linear;
+        width: 70px;
+        left: +340px;
+        top: 105px;
+        opacity: 0.4;
+        background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+        border-radius: 150px 150px 140px 170px;
+    }
+    
+    @keyframes puzir2 {
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(+13px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+    .puzir3{
+        height: 100px;
+        width: 100px;
+        background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+        opacity: 0.4;
+        border-radius: 150px 190px 90px 190px;
+        position: absolute;
+        animation: puzir3 8s infinite linear;
+        left: 10px;
+        top: 30px;
+    }
+    @keyframes puzir3 {
+        0%{
+            transform: translateY(0px);
+    
+        }
+        50%{
+            transform: translateY(+16px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+
+    .first h1 {
+        font-size: 30px;
         width: 100%;
-    padding: 30px 40px;
+        padding: 30px 40px;
     }
-    .first button{
-        padding: 5.5px;
+
+    .first button {
+        padding: 6px;
         width: 80px;
-        font-size: 8.5px;
+        font-size: 9px;
+        text-align: center;
+        transform: translateX(5px);
     }
-    header h2{
+
+    header h2 {
         font-size: 20px;
         margin-left: -30px;
     }
-    header a{
+
+    header a {
         font-size: 10px;
 
 
     }
-    header nav{
-    margin-right: -30px;
+
+    header nav {
+        margin-right: -30px;
 
     }
-    .first{
-        
+
+    .first {
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
-    .second div p{
+
+    .first button {
+        position: relative;
+        right: -100px;
+    }
+
+    .second div p {
         font-size: 14px;
-    
+
         outline: none;
-        }
-        .second div h3{
-            font-size: 17px;
-        }
-        .second h2{
-            font-size: 20px;
-        }
-        .krug{
-            height: 40px;
-            width: 40px;
-            border-radius: 40px;
-            background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
-            display: flex;
-            color: azure;
-            font-size: 14px;
-            margin: 1px 1px;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-        
-        }
-        .second div{
-            width: 270px;
-            height: 190px;
-            padding: 10px;
-    
-        }
-        .third h2{
-            font-size: 20px;
-            margin-top: -100px;
-        }
-        .third div i{
-            font-size: 13.5px;
-        }
-        .third div{
-            width: 330px;
-    
+    }
 
-        }
-        .third h4{
-            font-size: 13px;
-        }
-        .fourth h2{
-            font-size: 20px;
-        }
-        .fourth p{
-            font-size: 14px;
-            width: 95%
+    .second div h3 {
+        font-size: 17px;
+    }
 
-        }
-        .fourth div{
-            margin: 15px;
-        }
-        .fourth button{
-            padding: 5.5px;
-            width: 80px;
-            font-size: 8.5px;
-        }
-        footer p{
-            font-size: 12px;
-        }
-        footer a{
-            font-size: 12px;
-        }
-        footer h3{
-            font-size: 17px;
-        }
+    .second h2 {
+        font-size: 20px;
+    }
+
+    .krug {
+        height: 40px;
+        width: 40px;
+        border-radius: 40px;
+        background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+        display: flex;
+        color: azure;
+        font-size: 14px;
+        margin: 1px 1px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .second div {
+        width: 270px;
+        height: 190px;
+        padding: 10px;
+
+    }
+
+    .third h2 {
+        font-size: 20px;
+        margin-top: -100px;
+    }
+
+    .third div i {
+        font-size: 13.5px;
+    }
+
+    .third div {
+        width: 330px;
+
+
+    }
+
+    .third h4 {
+        font-size: 13px;
+    }
+
+    .fourth h2 {
+        font-size: 20px;
+    }
+
+    .fourth p {
+        font-size: 14px;
+        width: 95%
+    }
+
+    .fourth div {
+        margin: 15px;
+    }
+
+    .fourth button {
+        padding: 5.5px;
+        width: 80px;
+        font-size: 8.5px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+
+    footer h3 {
+        font-size: 17px;
+    }
 }
