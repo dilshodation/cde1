@@ -202,7 +202,6 @@ header nav {
     outline: none;
     width: 180px;
     margin: 0 2px;
-    transform: translateX(-20px);
     background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
     color: azure;
     font-size: 15px;
@@ -456,6 +455,91 @@ article h3 {
         width: 240px;
 
     }
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+    .first h1{
+        font-size: 50px;
+    }
+    .puzir {
+        height: 215px;
+        width: 215px;
+        position: absolute;
+        top: 20px;
+        right: 255px;
+        animation: puzir 5s infinite linear;
+        background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+        border-radius: 140px 140px 150px 160px;
+        opacity: 0.4;
+    }
+    
+    @keyframes puzir {
+        0% {
+            transform: translateY(0px);
+        }
+    
+        50% {
+            transform: translateY(+10px);
+        }
+    
+        100% {
+            transform: translateY(0px);
+    
+    
+        }
+    
+    }
+    
+    .puzir2 {
+        height: 180px;
+        position: absolute;
+        animation: puzir2 7s infinite linear;
+        width: 180px;
+        left: +715px;
+        top: 187px;
+        opacity: 0.4;
+        background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+        border-radius: 150px 150px 140px 170px;
+    }
+    
+    @keyframes puzir2 {
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(+13px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+    .puzir3{
+        height: 225px;
+        width: 225px;
+        background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+        opacity: 0.4;
+        border-radius: 150px 190px 90px 190px;
+        position: absolute;
+        animation: puzir3 8s infinite linear;
+        left: 125px;
+        top: 20px;
+    }
+    @keyframes puzir3 {
+        0%{
+            transform: translateY(0px);
+    
+        }
+        50%{
+            transform: translateY(+16px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
 
     .second div p {
         font-size: 17px;
@@ -469,14 +553,100 @@ article h3 {
         width: 250px;
     }
 
+.puzir {
+    height: 190px;
+    width: 190px;
+    position: absolute;
+    top: 45px;
+    right: 145px;
+    animation: puzir 5s infinite linear;
+    background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+    border-radius: 140px 140px 150px 160px;
+    opacity: 0.4;
+}
+
+@keyframes puzir {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(+10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+
+
+    }
+
+}
+
+.puzir2 {
+    height: 150px;
+    position: absolute;
+    animation: puzir2 7s infinite linear;
+    width: 150px;
+    left: +570px;
+    top: 190px;
+    opacity: 0.4;
+    background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+    border-radius: 150px 150px 140px 170px;
+}
+
+@keyframes puzir2 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(+13px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.puzir3{
+    height: 200px;
+    width: 200px;
+    background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
+    opacity: 0.4;
+    border-radius: 150px 190px 90px 190px;
+    position: absolute;
+    animation: puzir3 8s infinite linear;
+    left: 30px;
+    top: 60px;
+}
+@keyframes puzir3 {
+    0%{
+        transform: translateY(0px);
+
+    }
+    50%{
+        transform: translateY(+16px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
     .first p {
         font-size: 18px;
         width: 85%;
+
     }
 
     .first h1 {
         width: 85%;
+        font-size: 45px;
+
     }
+    .first{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
 
     .fourth p {
         font-size: 17px;
@@ -503,8 +673,9 @@ article h3 {
         position: relative;
         bottom: -100px;
     }
-}
+    
 
+}
 @media screen and (max-width: 426px) {
     .first p {
         font-size: 14px;
@@ -599,8 +770,9 @@ article h3 {
         width: 80px;
         font-size: 9px;
         text-align: center;
-        transform: translateX(5px);
-    }
+    position: relative;
+    left: 0px;
+       }
 
     header h2 {
         font-size: 20px;
