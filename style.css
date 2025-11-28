@@ -718,7 +718,7 @@ article h3 {
         animation: puzir2 7s infinite linear;
         width: 60px;
         left: +250px;
-        top: 105px;
+        top: 100px;
         opacity: 0.4;
         background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
         border-radius: 150px 150px 140px 170px;
