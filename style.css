@@ -713,11 +713,11 @@ article h3 {
     }
     
     .puzir2 {
-        height: 70px;
+        height: 60px;
         position: absolute;
         animation: puzir2 7s infinite linear;
-        width: 70px;
-        left: +300px;
+        width: 60px;
+        left: +250px;
         top: 105px;
         opacity: 0.4;
         background-image: linear-gradient(to right, darkgreen, rgb(95, 2, 95));
@@ -743,7 +743,7 @@ article h3 {
         border-radius: 150px 190px 90px 190px;
         position: absolute;
         animation: puzir3 8s infinite linear;
-        left: 10px;
+        left: 20px;
         top: 30px;
     }
     @keyframes puzir3 {
